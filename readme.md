@@ -4,6 +4,10 @@
 
 ### 让一起携手的哥们早点下班回家陪老婆,陪孩子,陪女朋友
 
-[1.启动spring boot ](https://github.com/wulimax/blogs/blob/master/1.m)
+[1.启动spring boot ](https://github.com/wulimax/blogs/blob/master/1.md);
 
-[2.]
+[2.Explain](https://github.com/wulimax/blogs/blob/master/2.md);
+
+[3.redis 单线程 支撑并发原理](https://github.com/wulimax/blogs/blob/master/3.md)
+
+[4.mysql优化思路](https://github.com/wulimax/blogs/blob/master/4.md)
