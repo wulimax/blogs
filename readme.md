@@ -14,5 +14,8 @@
 
 [5.一次网络请求的思考](https://github.com/wulimax/fs2/blob/master/http/README.md);
 
-[5.HTTP的改进](https://github.com/wulimax/blogs/blob/master/5/README.md);
+[6.HTTP的改进](https://github.com/wulimax/blogs/blob/master/5/README.md);
 
+[7.sphinx造轮子](https://github.com/wulimax/fs2/blob/master/sphinx/README.md);
+
+[8.小程序拦截器](https://github.com/wulimax/fs2/blob/master/wx/intercepto.js);
