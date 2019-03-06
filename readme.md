@@ -19,3 +19,5 @@
 [7.sphinx造轮子](https://github.com/wulimax/fs2/blob/master/sphinx/README.md);
 
 [8.小程序拦截器](https://github.com/wulimax/fs2/blob/master/wx/intercepto.js);
+
+[9.topN的思路](https://github.com/wulimax/fs2/blob/master/TopN/README.md);
