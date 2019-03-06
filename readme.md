@@ -12,4 +12,7 @@
 
 [4.mysql优化思路](https://github.com/wulimax/blogs/blob/master/4.md);
 
+[5.一次网络请求的思考](https://github.com/wulimax/fs2/blob/master/http/README.md);
+
 [5.HTTP的改进](https://github.com/wulimax/blogs/blob/master/5/README.md);
+
