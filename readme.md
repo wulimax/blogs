@@ -10,7 +10,7 @@
 
 [3.redis 单线程 支撑并发原理](https://github.com/wulimax/blogs/blob/master/3.md);
 
-[4.mysql优化思路](https://github.com/wulimax/blogs/blob/master/4.md);
+[4.mysql优化思路](https://github.com/wulimax/blogs/blob/master/mysql/4.md);
 
 [5.一次网络请求的思考](https://github.com/wulimax/fs2/blob/master/http/README.md);
 
@@ -21,3 +21,5 @@
 [8.小程序拦截器](https://github.com/wulimax/fs2/blob/master/wx/intercepto.js);
 
 [9.topN的思路](https://github.com/wulimax/fs2/blob/master/TopN/README.md);
+
+[10.mysql深度了解](https://github.com/wulimax/blogs/blob/master/mysql/mysql.md);
