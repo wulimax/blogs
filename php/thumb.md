@@ -18,9 +18,11 @@
 
 ​     问题是解决了但是我们不能止步于此,我们要找到其根源 为啥需要那么大的内存 比他大的图片同样的内存都可以正常上传这是为什么呢:
 
-![](https://github.com/wulimax/blogs/blob/master/php/php_thumb_1.png)
+![](https://github.com/wulimax/blogs/blob/master/img/php_thumb_1.png)
 
-![](https://github.com/wulimax/blogs/blob/master/php/php_thumb_2.png)
+![](https://github.com/wulimax/blogs/blob/master/img/php_thumb_2.png)
+
+我们发现
 
 
 
