@@ -11,7 +11,7 @@ MySQL事物底层原理
 ​            Partially Commited：在最后一条语句执行之后； 
 ​            Failed：发现事务无法正常执行之后； 
 ​           Aborted：事务被回滚并且数据库恢复到了事务进行之前的状态之后； 
-​            Commited：成功执行整个事务； 
+​           Commited：成功执行整个事务； 
 
 
 
