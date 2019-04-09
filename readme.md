@@ -10,7 +10,7 @@
 
 [3.redis 单线程 支撑并发原理](https://github.com/wulimax/blogs/blob/master/3.md);
 
-[4.mysql优化思路](https://github.com/wulimax/blogs/blob/master/mysql/4.md);
+[4.mysql](https://github.com/wulimax/blogs/blob/master/mysql/README.md);
 
 [5.一次网络请求的思考](https://github.com/wulimax/fs2/blob/master/http/README.md);
 
