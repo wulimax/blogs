@@ -6,3 +6,7 @@
 
 [4.mysql 日志](https://github.com/wulimax/blogs/blob/master/mysql/mysql_log.md);
 
+[5.innodb引擎](https://github.com/wulimax/blogs/blob/master/mysql/mysql_innodb.md);
+
+
+
