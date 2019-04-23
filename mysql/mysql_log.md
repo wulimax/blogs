@@ -127,4 +127,4 @@ Server 层包括连接器、查询缓存、分析器、优化器、执行器等�
       undo log
 ```
 
-这里主要讲解两个日志redo log 跟 bing log
+查询最近一次刷入脏页LSN记录 show engine innodb status
