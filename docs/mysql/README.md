@@ -1,3 +1,7 @@
+##构建mysql知识网络
+
+![知识图谱](https://github.com/wulimax/blogs/blob/master/mysql/image/mysql_nav.png)
+
 [1.mysql优化思路](https://github.com/wulimax/blogs/blob/master/docs/mysql/4.md);
 
 [2.mysql 执行流程](https://github.com/wulimax/blogs/blob/master/docs/mysql/mysql.md);

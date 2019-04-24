@@ -1,6 +1,6 @@
 mysql 执行步骤
 
-![](https://github.com/wulimax/blogs/blob/master/img/mysql_log_1.png)
+![](https://github.com/wulimax/blogs/blob/master/docs/img/mysql_log_1.png)
 
 MySQL 可以分为 Server 层和存储引擎层两部分
 

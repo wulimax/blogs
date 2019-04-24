@@ -1,7 +1,5 @@
 mysql执行流程
 
-![](https://github.com/wulimax/blogs/blob/master/mysql/mysql.png)
-
 关系模型：(结构化数据模型)
 
 关系模型
