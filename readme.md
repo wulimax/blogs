@@ -6,24 +6,16 @@
 
 [1.启动spring boot ](https://github.com/wulimax/blogs/blob/master/docs/1.md);
 
-[2.Explain](https://github.com/wulimax/blogs/blob/master/docs/2.md);
+[2.mysql](https://github.com/wulimax/blogs/blob/master/docs/mysql/README.md);
 
-[3.redis 单线程 支撑并发原理](https://github.com/wulimax/blogs/blob/master/docs/3.md);
+[3.redis](https://github.com/wulimax/blogs/blob/master/docs/redis/README.md);
 
-[4.mysql](https://github.com/wulimax/blogs/blob/master/docs/mysql/README.md);
+[4.HTTP的改进](https://github.com/wulimax/blogs/blob/master/docs/HTTP/README.md);
 
-[5.一次网络请求的思考](https://github.com/wulimax/fs2/blob/master/http/README.md);
+[5.sphinx造轮子](https://github.com/wulimax/fs2/blob/master/sphinx/README.md);
 
-[6.HTTP的改进](https://github.com/wulimax/blogs/blob/master/docs/HTTP/README.md);
+[6.小程序拦截器](https://github.com/wulimax/fs2/blob/master/wx/intercepto.js);
 
-[7.sphinx造轮子](https://github.com/wulimax/fs2/blob/master/sphinx/README.md);
+[7.topN的思路](https://github.com/wulimax/fs2/blob/master/TopN/README.md);
 
-[8.小程序拦截器](https://github.com/wulimax/fs2/blob/master/wx/intercepto.js);
-
-[9.topN的思路](https://github.com/wulimax/fs2/blob/master/TopN/README.md);
-
-[10.mysql深度了解](https://github.com/wulimax/blogs/blob/master/docs/mysql/mysql.md);
-
-[10.swoole基础知识](https://github.com/wulimax/fs2/blob/master/swoole/READMY.md);
-
-[11.PHP](https://github.com/wulimax/blogs/blob/master/docs/php/README.md);
+[8.PHP](https://github.com/wulimax/blogs/blob/master/docs/php/README.md);

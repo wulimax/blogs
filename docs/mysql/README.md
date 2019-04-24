@@ -12,5 +12,7 @@
 
 [5.innodb引擎](https://github.com/wulimax/blogs/blob/master/docs/mysql/mysql_innodb.md);
 
+[6.Explain](https://github.com/wulimax/blogs/blob/master/docs/mysql/2.md);
+
 
 
