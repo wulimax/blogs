@@ -14,7 +14,7 @@
 
 [5.一次网络请求的思考](https://github.com/wulimax/fs2/blob/master/http/README.md);
 
-[6.HTTP的改进](https://github.com/wulimax/blogs/blob/master/HTTP/README.md);
+[6.HTTP的改进](https://github.com/wulimax/blogs/blob/master/docs/HTTP/README.md);
 
 [7.sphinx造轮子](https://github.com/wulimax/fs2/blob/master/sphinx/README.md);
 
