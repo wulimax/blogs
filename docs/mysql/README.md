@@ -1,6 +1,6 @@
 ## 数据库
 
-![sql网络](https://github.com/wulimax/blogs/blob/master/docs/mysql/image/SQL.bmp)
+![sql网络](https://github.com/wulimax/blogs/blob/master/docs/mysql/image/SQL.jpg)
 
 ##构建mysql知识网络
 
