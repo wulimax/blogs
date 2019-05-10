@@ -1,6 +1,6 @@
 ## 数据库
 
-<img src="https://github.com/wulimax/blogs/blob/master/docs/mysql/image/SQL.jpg" height="430" width="495">
+<img src="https://github.com/wulimax/blogs/blob/master/docs/mysql/image/SQL.jpg" height="495" width="495">
 
 ##构建mysql知识网络
 
