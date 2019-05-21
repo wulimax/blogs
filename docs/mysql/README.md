@@ -2,7 +2,7 @@
 
 <img src="https://github.com/wulimax/blogs/blob/master/docs/mysql/image/SQL.jpg" height="495" width="495">
 
-##构建mysql知识网络
+## 构建mysql知识网络
 
 ![知识图谱](https://github.com/wulimax/blogs/blob/master/docs/mysql/image/mysql_nav.png)
 
