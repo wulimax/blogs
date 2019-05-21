@@ -6,7 +6,9 @@
 
    -> 使用php swoole的定时功能 通过定时器 获取kafka的数据
 
-   -> 获取出来的数据 导入到elasticsearch全文索引中
+   -> 获取出来的数据 导入到elasticsearch
+
+   -> 创建索引 创建文档 对数据进行操作
 
    ***
 
