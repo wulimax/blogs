@@ -4,3 +4,7 @@
 
 [2.swoole基础知识](https://github.com/wulimax/fs2/blob/master/swoole/READMY.md);
 
+[3.lru算法基本思路](https://github.com/wulimax/fs2/blob/master/php/lru.md);
+
+
+
