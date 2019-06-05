@@ -4,7 +4,7 @@
 
 首先我们先了解一下树的概念: 
 
-![树](https://github.com/wulimax/blogs/blob/master/docs/mysql/tree.png)
+![树](https://github.com/wulimax/blogs/blob/master/docs/mysql/image/tree.png)
 
 二叉搜索树的特点是：每个节点的左儿子小于父节点，父节点又小于右儿子。这样如果你要查 ID_card_n2 的话，按照图中的搜索顺序就是按照 UserA -> UserC -> UserF -> User2 这个路 径得到。这个时间复杂度是 O(log(N))。
 当然为了维持 O(log(N)) 的查询复杂度，你就需要保持这棵树是平衡二叉树。为了做这个保 证，更新的时间复杂度也是 O(log(N))。
