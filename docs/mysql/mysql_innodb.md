@@ -4,9 +4,12 @@
 
 首先我们先了解一下树的概念: 
 
-![树](https://github.com/wulimax/blogs/blob/master/docs/mysql/image/tree.png)
+<img href="https://github.com/wulimax/blogs/blob/master/docs/mysql/image/tree.png" height="330" width="495">
 
 二叉搜索树的特点是：每个节点的左儿子小于父节点，父节点又小于右儿子。这样如果你要查 ID_card_n2 的话，按照图中的搜索顺序就是按照 UserA -> UserC -> UserF -> User2 这个路 径得到。这个时间复杂度是 O(log(N))。
+
+**使用场景查询比较多的情况,但是对于一个经常需要增删改的场景就显得有点鸡肋了** 
+
 当然为了维持 O(log(N)) 的查询复杂度，你就需要保持这棵树是平衡二叉树。为了做这个保 证，更新的时间复杂度也是 O(log(N))。
 树可以有二叉，也可以有多叉。多叉树就是每个节点有多个儿子，儿子之间的大小保证从左到右 递增。二叉树是搜索效率最高的，但是实际上大多数的数据库存储却并不使用二叉树。其原因 是，索引不止存在内存中，还要写到磁盘上。
 
@@ -23,6 +26,10 @@
 ​      为什么要尽量用主键索引: 数据存在于主键索引上 使用普通索引会触发回表 ,可以使用覆盖索引优化
 
 ​      force index 可以矫正优化器的选择
+
+<img href="https://github.com/wulimax/blogs/blob/master/docs/mysql/image/tree_1.png" height="330" width="495">
+
+​    可以看出在b+树中,叶子节点会指向他相邻的叶子节点,这样可以有效减少遍历次数
 
 3.锁
 
