@@ -23,3 +23,6 @@
 [9.liunx](https://github.com/wulimax/blogs/blob/master/docs/liunx/README.md);
 
 [10.数据同步方案](https://github.com/wulimax/blogs/blob/master/docs/maxwell/README.md)
+
+[10.javascript](https://github.com/wulimax/blogs/blob/master/docs/javascript/README.md)
+
