@@ -40,7 +40,7 @@ def get_answer(text):
     result = response.json()
     answer = result['results'][0]['values']['text']
     return answer
-
+#获取用户信息并返回
 @itchat.msg_register(itchat.content.TEXT)
 def text_reply(msg):
     myself = itchat.get_friends(update=True)[0]['NickName']
@@ -58,4 +58,6 @@ itchat.auto_login(enableCmdQR=2)
 itchat.run()
 
 ```
+
+[参考资料](https://www.cnblogs.com/ouyangping/p/8453920.html)
 
