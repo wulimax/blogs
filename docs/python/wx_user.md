@@ -25,9 +25,9 @@ import json
 
 # 调用图灵机器人的api，采用爬虫的原理，根据聊天消息返回回复内容
 def get_data(text):
-    userId = '363282'
+    userId = '用户id'
     inputText = {'text': text}
-    key = '238061b41e4b4d7cbba29f2fac58173c'
+    key = '自己申请的key'
     userInfo = {'apiKey': key, 'userId': userId}
     perception = {'inputText': inputText}
     data = {'perception': perception, 'userInfo': userInfo}
