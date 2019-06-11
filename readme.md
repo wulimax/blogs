@@ -24,5 +24,9 @@
 
 [10.数据同步方案](https://github.com/wulimax/blogs/blob/master/docs/maxwell/README.md)
 
-[10.javascript](https://github.com/wulimax/blogs/blob/master/docs/javascript/README.md)
+[11.javascript](https://github.com/wulimax/blogs/blob/master/docs/javascript/README.md)
+
+[12.微信自动聊天机器人](https://github.com/wulimax/blogs/blob/master/docs/python/wx_user.md)
+
+
 
