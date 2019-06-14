@@ -18,7 +18,7 @@
 
 [6.Explain](https://github.com/wulimax/blogs/blob/master/docs/mysql/2.md);
 
-[7.记一次死锁分析记录]((https://github.com/wulimax/blogs/blob/master/docs/mysql/xlock.md)
+[7.记一次死锁分析记录](https://github.com/wulimax/blogs/blob/master/docs/mysql/xlock.md)
 
 
 
