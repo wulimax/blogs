@@ -96,13 +96,45 @@ Record lock, heap no 1 PHYSICAL RECORD: n_fields 1; compact format; info bits 0
  0: len 8; hex 73757072656d756d; asc supremum;;
 ```
 
-从上面我们可以看出 
+共享锁、排他锁与意向锁的兼容矩阵如下
 
-全局 ID130109184 首先对 要锁定了两条数据  等待加锁 发现占用 等待
+|      |   X    |   IX   |   S    |   IS   |
+| :--: | :----: | :----: | :----: | :----: |
+|  X   | `冲突` | `冲突` | `冲突` | `冲突` |
+|  IX  | `冲突` |  兼容  | `冲突` |  兼容  |
+|  S   | `冲突` | `冲突` |  兼容  |  兼容  |
+|  IS  | `冲突` |  兼容  |  兼容  |  兼容  |
 
-全局 ID130109398 后一条记录先于前一天记录 添加成功
+#### 事务执行时序表
 
-上一个事物发现下一个事物已经完成 ,申请锁发现我要插入的位置被占用了 ,死锁就发生了
+|        T1(130109184)        |            T2()             |                        T3(130109398)                         |
+| :-------------------------: | :-------------------------: | :----------------------------------------------------------: |
+|           begin;            |           begin;            |                            begin;                            |
+| insert into table values(); |                             |                                                              |
+|                             | insert into table values(); |                                                              |
+|                             |                             |                 insert into table values();                  |
+|          rollback;          |                             |                                                              |
+|                             |                             | ERROR 1213 (40001): Deadlock found when trying to get lock; try restarting transaction |
+|                             |  Query OK, 1 row affected   |                                                              |
+
+#### 死锁成因
+
+事务T1成功插入记录，并获得索引的排他记录锁(LOCK_X | LOCK_REC_NOT_GAP)。
+紧接着事务T2、T3也开始插入记录，请求排他插入意向锁(LOCK_X | LOCK_GAP | LOCK_INSERT_INTENTION)；但由于发生重复唯一键冲突，各自请求的排他记录锁(LOCK_X | LOCK_REC_NOT_GAP)转成共享记录锁(LOCK_S | LOCK_REC_NOT_GAP)。
+
+T1回滚释放索引i的排他记录锁(LOCK_X | LOCK_REC_NOT_GAP)，T2和T3都要请求索引的排他记录锁(LOCK_X | LOCK_REC_NOT_GAP)。
+由于X锁与S锁互斥，T2和T3都等待对方释放S锁。
+于是，死锁便产生了。
+
+如果此场景下，只有两个事务T1与T2或者T1与T3，则不会引发如上死锁情况产生。
+
+### 思考
+
+​     对于大量插入的场景应该减少上锁次数,提高单次插入的量 ,也就是说  把一条插入 合并成一组插入
+
+
+
+
 
 常用锁等待相关命令：
 
