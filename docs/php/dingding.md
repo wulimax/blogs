@@ -1,13 +1,22 @@
 ## 钉钉消息推送
 
 ```php
+<?php
+/**
+ * 消息通知
+ * User:
+ * Date: 2019/6/10
+ * Time: 17:23
+ */
 class DingDing{
     /****开发钉钉通知系统********************************************/
     protected    $AgentId= ;
     protected    $AppKey= '';
     protected    $AppSecret= '';
     private $token = null;
-    private $user_table = null;
+    //缓存table lru保留最近最多的使用的十个
+    private $user_table = [];
+    private $cachenum = 10;
     /**公共请求方法**/
     public function post_url($url, $post = '', $host = '', $referrer = '', $cookie = '', $proxy = -1, $sock = false, $useragent = 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1)')
     {//'192.3.25.99:7808'
@@ -28,7 +37,10 @@ class DingDing{
             @curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 30);
             @curl_setopt($ch, CURLOPT_TIMEOUT, 60);
             @curl_setopt($ch, CURLOPT_IPRESOLVE, CURL_IPRESOLVE_V4);
-
+            if(is_array($host) && !is_string($host)){
+                @curl_setopt($ch, CURLOPT_HTTPHEADER, $host);
+                unset($host);
+            }
             if ($method == 'POST') {
                 @curl_setopt($ch, CURLOPT_POST, 1);
                 @curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
@@ -108,50 +120,82 @@ class DingDing{
      * @param $value
      * @param $time 默认十分钟
      */
-    public function rediscache($key = '',$value='',$time= 600){
+    public function filecache($key = '',$value='',$time= 600,$file_path = null){
         if(empty($key)){return false;}
-        $file_path = '/web/log/dingding.txt';
-        $cacheData = [];
+        //优先从堆内缓存中读取
+        if(!empty($this->user_table)){
+            //热点数据查询
+            if(!empty($key) && empty($value)){
+                if(isset($this->user_table[$key])){
+                  if($this->user_table[$key]['time'] > time()){
+                      return $this->user_table[$key]['value'];
+                  }else{
+                      //删除过期数据
+                      unset($this->user_table[$key]);
+                  }
+                }
+            }
+        }
+        //添加默认缓存存储文件
+        if($file_path == null){
+            $file_path ='';
+        }
         $resData = null;
-        if(!is_file($file_path)){ return false; }
-        foreach ($this->readTxt($file_path) as $item){
-            $item = json_decode($item,true);
-            if($item['time']< time()){ continue; }
-            $item[$item['key']]['value'] = $item['value'];
-            $item[$item['key']]['time'] = $item['time'];
-            $item[$item['key']]['key'] = $item['key'];
+        $cacheData =[];
+        if(is_file($file_path)) {
+            foreach ($this->readTxt($file_path) as $item) {
+                $item = json_decode($item, true);
+                if ($item['time'] < time()) {continue;}
+                //查询
+                if(!empty($key) && empty($value) && $item['key'] == $key){
+                    //清除老生代数据
+                    if(count($this->user_table) > $this->cachenum){
+                        array_shift($this->user_table);
+                    }
+                    //更新数据热度
+                    if(isset($this->user_table)){
+                        unset($this->user_table[$item['key']]);
+                    }
+                    $this->user_table[$item['key']] = $item;
+                    //返回命中数据
+                    return $item['value'];
+                }
+                $cacheData[$item['key']]['value'] = $item['value'];
+                $cacheData[$item['key']]['time'] = $item['time'];
+                $cacheData[$item['key']]['key'] = $item['key'];
+            }
         }
             // 删除
         if($time == 0){ unset($cacheData[$key]); $resData = true;}
-            //查询
-        if(empty($value) && !empty($key)){
-            $resData = isset($cacheData[$key])?$cacheData[$key]:null;
-        }
             //写入
         if(!empty($value) && !empty($key)){
             $cacheData[$key]['key'] = $key;
             $cacheData[$key]['value'] = $value;
             $cacheData[$key]['time'] = time()+$time;
+            //写入堆内缓存
+            $this->user_table[$key] = $cacheData[$key];
             $resData = true;
         }
          $string = '';
         foreach ($cacheData as $item){
             $string .= json_encode($item,320).PHP_EOL;
         }
+        //持久化到硬盘
         file_put_contents($file_path, $string);
         //默认false
         return $resData;
     }
-    /**
-    *$value 发送内容
-    *$tile 发送人
-    **/
-    public function index($value='',$tile=){
+     /**
+     * @param string $value 内容
+     * @param int $tile 姓名 || 手机号
+     * @return bool|mixed|string
+     */
+    public function index($value='',$tile=''){
        $userid = $this->getAlluser($tile);
        if(empty($tile)){
            $user_lit = [];
            foreach ($userid as $item){
-               if($item['pname'] != '默认发送给指定的人'){ continue; }
+               if($item['pname'] != '默认发送部门'){ continue; }
                array_push($user_lit,$item['userid']);
            }
            return $this->putMq(implode(',',$user_lit),$value);
@@ -162,21 +206,20 @@ class DingDing{
     }
     private function getToken(){
         if(!empty($this->token)){ return $this->token; }
-        $resdata = $this->rediscache('dingdingtoken');
+        $resdata = $this->filecache('dingdingtoken');
         if($resdata){ return $resdata; }
         $url  = 'https://oapi.dingtalk.com/gettoken?appkey='.$this->AppKey.'&appsecret='.$this->AppSecret;
         $resdata =$this->post_url($url);
         $resdata = json_decode($resdata,true);
         if($resdata['errcode'] ==0 && isset($resdata['access_token'])){
-            $this->rediscache('dingdingtoken',$resdata['access_token'],7000);
+            $this->filecache('dingdingtoken',$resdata['access_token'],7000);
         }
         $this->token = $resdata['access_token'];
         return $resdata['access_token'];
     }
     /**获取所有用户名,手机号,部门,部门id**/
-    private function getAlluser($req){
-        $userArr = $this->user_table;
-        if(empty($userArr)){ $userArr = $this->rediscache('dingding:userall');}
+    public function getAlluser($req= null){
+        if(empty($userArr)){ $userArr = $this->filecache('dingding:userall');}
         if(!$userArr) {
             $url = 'https://oapi.dingtalk.com/department/list?access_token=' . $this->getToken();
             $resdata = $this->post_url($url);
@@ -201,8 +244,7 @@ class DingDing{
                 }
             }
 
-            $this->rediscache('dingding:userall', json_encode($userArr, 320));
-            $this->user_table = $userArr;
+            $this->filecache('dingding:userall', json_encode($userArr, 320));
         }
         if(!is_array($userArr)){ $userArr = json_decode($userArr,true); }
         $resData = [];
@@ -240,9 +282,6 @@ class DingDing{
         return $this->post_url($url,$data);
 
     }
-    /**读取本地文件内容
-    *$filepath 文件路径
-    */
     public  function readTxt($filepath)
     {
         $handle = fopen($filepath, 'rb');
