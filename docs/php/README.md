@@ -8,5 +8,7 @@
 
 [4.钉钉消息推送功能](https://github.com/wulimax/blogs/blob/master/docs/php/dingding.md)
 
+[5.单例数据库链接类](https://github.com/wulimax/blogs/blob/master/docs/php/DB.md)
+
 
 
