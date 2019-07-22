@@ -44,3 +44,5 @@ SELECT  字段1,字段2,字段3,( sum(字段4) -sum(字段5)   ) as  字段7   F
 }
 ```
 
+ES 从6.3版本开始支持SQL语法 我们可以直接在用SQL查询索引  [ES SQL](https://www.elastic.co/cn/blog/elasticsearch-6-3-0-released)
+
