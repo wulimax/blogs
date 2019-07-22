@@ -28,5 +28,11 @@
 
 [12.微信自动聊天机器人](https://github.com/wulimax/blogs/blob/master/docs/python/wx_user.md)
 
+[13.elasticsearch聚合后再进行计算](https://github.com/wulimax/blogs/blob/master/docs/maxwell/ESaggs.md)
+
+
+
+
+
 
 
