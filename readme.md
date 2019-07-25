@@ -30,6 +30,8 @@
 
 [13.elasticsearch聚合后再进行计算](https://github.com/wulimax/blogs/blob/master/docs/maxwell/ESaggs.md)
 
+[14.elasticsearch api ](https://github.com/wulimax/blogs/blob/master/docs/maxwell/ESapi.md)
+
 
 
 
