@@ -3,7 +3,7 @@
 ```php
  <?php
 
- /**使用单例封装elasticesarch 封装类
+ /**elasticesarch 封装类
   * Class elasticsearch
   */
  final class elasticsearch
@@ -158,6 +158,7 @@
       * @param $where
       */
     public function es_api(&$where){
+        if(is_string($where)){ return $this->exsql($where); }
         $reqdata = [];
         $reqdata['size'] = 20;//默认取二十条数据
         //过滤查询 == start
@@ -201,13 +202,20 @@
                 $reqdata['sort'][$where[0]]['order'] = $where[1];
             }
         }
+        //分组查询
+        if(isset($where['group_key'])){
+            $reqdata['aggs'][$where['group_key']]['terms']['field'] = $where['group_key'];
+        }
+
         //过滤查询 == end
         //模糊搜索条件
         if(isset($where['search_key']) && isset($where['search_value'])){$reqdata['query']['match'][$where['search_key']] = $where['search_value'];}
         //返回字段
         if(isset($where['field'])){
             if(is_array($where['field'])){$reqdata['_source'] = $where['field'];}
-            if(is_string($where['field'])){$reqdata['_source'] = explode(',',$where['field']);}
+            if(is_string($where['field'])){ $where['field'] = explode(',',$where['field']);}
+            $this->exwstr($where['field'],$reqdata,$where);//分析查询
+            if(!empty($where['field'])){ $reqdata['_source'] = $where['field'];}
         }
         //分页
         if(isset($where['limit']) || isset($where['size']) ){ $reqdata['size'] = isset($where['limit'])?$where['limit']:$where['size'];}
@@ -230,6 +238,58 @@
         return $this->analysis($result);
     }
 
-}
+     /**解析数组
+      * @param $wdata
+      */
+    private function exwstr(&$wdata,&$reqdata,&$where){
+        foreach ($wdata as $key=> $item){
+            $item = strtolower($item);
+            if(strpos($item,'(') === false){continue;}
+            $cardinality = '';
+            //存在运算操作
+            if(strpos($item,'sum') !== false ){$cardinality = 'sum';}
+            if(strpos($item,'avg') !== false ){$cardinality = 'avg';}
+            //去重
+            if(strpos($item,'distinct') !== false ){ $cardinality  = 'cardinality';}
+            if(strpos($item,'min') !== false ){ $cardinality  = 'min';}
+            if(strpos($item,'max') !== false ){ $cardinality  = 'max';}
+            $newstr =  explode(' ',$item);
+            if(strpos($item,' as ') !== false){
+                preg_match_all("/[^(*)]+/",$item,$str_ary);
+                if(isset($where['group_key'])){
+                    $reqdata['aggs'][$where['group_key']]['aggs'][trim($newstr[2])][$cardinality]['field'] = trim($str_ary[0][1]);
+                }else{
+                    $reqdata['aggs'][trim($newstr[2])][$cardinality]['field'] = trim($str_ary[0][1]);
+                }
+            }else{
+                preg_match_all("/[^(*)]+/",$item,$str_ary);
+                if(isset($where['group_key'])){
+                    $reqdata['aggs'][$where['group_key']]['aggs'][trim($newstr[2])][$cardinality]['field'] = trim($str_ary[0][1]);
+                }else{
+                    $reqdata['aggs'][trim($str_ary[0][1])][$cardinality]['field'] = trim($str_ary[0][1]);
+                }
+            }
+            //处理完删除元素
+            unset($wdata[$key]);
+        }
+    }
+
+     /**处理sql
+      * @param $where
+      */
+    private function exsql(&$sql){
+        $url = $this->host.'_xpack/sql?format=json';
+        $xml_data= '{"query": '.'"'.$sql.'"'.'}';
+        $response = $this->post_url($url,$xml_data,'POST');
+        $res=json_decode($response,true);
+        $data = [];
+        foreach ($res['rows'] as $key=>$val){
+            foreach ($res['columns'] as $k=>$v){
+                $data[$key][$v['name']] = $val[$k];
+            }
+        }
+        return $data;
+    }
+ }
 ```
 
