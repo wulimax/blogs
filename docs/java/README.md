@@ -4,3 +4,5 @@
 
 [2.LinkedList](https://github.com/wulimax/blogs/blob/master/docs/java/Linkedlist.md)
 
+[3.AVLTree](https://github.com/wulimax/blogs/blob/master/docs/java/AVLTree.md)
+
