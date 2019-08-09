@@ -6,3 +6,5 @@
 
 [3.AVLTree](https://github.com/wulimax/blogs/blob/master/docs/java/AVLTree.md)
 
+[4.TreeMP](https://github.com/wulimax/blogs/blob/master/docs/java/Treemp.md)
+
