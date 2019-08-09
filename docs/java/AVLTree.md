@@ -1,7 +1,6 @@
 平衡二叉树
 
 ```java
-package com.jdk.data.structures.jdkdatastructures.wlimax.tree;
 
 import java.util.ArrayList;
 
