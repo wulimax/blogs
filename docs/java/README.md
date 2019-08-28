@@ -8,3 +8,5 @@
 
 [4.TreeMP](https://github.com/wulimax/blogs/blob/master/docs/java/Treemp.md)
 
+[5.discuz authcode加密类](https://github.com/wulimax/blogs/blob/master/docs/java/authcode.md)
+
