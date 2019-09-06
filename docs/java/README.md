@@ -10,3 +10,7 @@
 
 [5.discuz authcode加密类](https://github.com/wulimax/blogs/blob/master/docs/java/authcode.md)
 
+[6.解密微信公众号数据](https://github.com/wulimax/blogs/blob/master/docs/java/wxcode.md)
+
+
+

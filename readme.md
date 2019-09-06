@@ -4,13 +4,11 @@
 
 ### 让一起携手的哥们早点下班回家陪老婆,陪孩子,陪女朋友
 
-[多年收集链接](https://github.com/wulimax/blogs/blob/master/url.md)
+[收集的一些链接](https://github.com/wulimax/blogs/blob/master/url.md)
 
 [1.启动spring boot ](https://github.com/wulimax/blogs/blob/master/docs/1.md);
 
 [2.mysql](https://github.com/wulimax/blogs/blob/master/docs/mysql/README.md);
-
-
 
 [3.redis](https://github.com/wulimax/blogs/blob/master/docs/redis/README.md);
 
