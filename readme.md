@@ -36,6 +36,8 @@
 
 [15. java 基础](https://github.com/wulimax/blogs/blob/master/docs/java/README.md)
 
+[16.踩坑之 int 转 byte[] 之 java vs php](https://github.com/wulimax/blogs/blob/master/docs/php/phpbyte.md)
+
 
 
 
