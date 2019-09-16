@@ -10,7 +10,7 @@
 
 ## 资源网站
 
-  	[订制图标](https://illustrio.com/)
+ ​ 	[订制图标](https://illustrio.com/)
 
 ​	  [以图搜图](https://whatanime.ga/)
 
@@ -47,8 +47,11 @@
 ​    [jquery插件库](http://www.jq22.com/)
 
 ​    [在线ps](https://ps.gaoding.com/?hmsr=ivan-intro-juejin#/)
-
-##技能图谱
+## 正则
+​    [在线正则学习](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)
+​    [javascript正则学习](http://www.softwhy.com/qiduan/regex_source/)
+     
+## 技能图谱
 
 ​	   [知识图谱](https://github.com/CyC2018/CS-Notes)
      [前端题](https://github.com/haizlin/fe-interview/blob/master/category/history.md)
