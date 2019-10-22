@@ -59,8 +59,8 @@
 ​    [题库站](http://www.caibi.club/)
 
 ​    [基础知识](https://snailclimb.top/JavaGuide/#/)
-
-​      [2019面试题](https://github.com/0voice/interview_internal_reference)
+​    [2019面试题](https://github.com/0voice/interview_internal_reference)
+​    [知识仓库地址](https://github.com/Snailclimb/JavaGuide/blob/master/docs/essential-content-for-interview/PreparingForInterview/JavaInterviewLibrary.md)
 
 ## 不错的博客站
 
