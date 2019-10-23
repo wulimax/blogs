@@ -47,6 +47,7 @@
 ​    [jquery插件库](http://www.jq22.com/)
 
 ​    [在线ps](https://ps.gaoding.com/?hmsr=ivan-intro-juejin#/)
+    [在线抠图](https://www.remove.bg/)
 ## 正则
 ​    [在线正则学习](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)
 ​    [javascript正则学习](http://www.softwhy.com/qiduan/regex_source/)
