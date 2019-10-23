@@ -48,6 +48,8 @@
 
 ​    [在线ps](https://ps.gaoding.com/?hmsr=ivan-intro-juejin#/)
     [在线抠图](https://www.remove.bg/)
+    [在线制作相册](https://lightmv.cn/)
+    [文件快穿:奶牛快穿](https://cowtransfer.com/)
 ## 正则
 ​    [在线正则学习](https://github.com/ziishaned/learn-regex/blob/master/translations/README-cn.md)
 ​    [javascript正则学习](http://www.softwhy.com/qiduan/regex_source/)
