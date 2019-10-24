@@ -38,6 +38,8 @@
 
 [16.踩坑之 int 转 byte[] 之 java vs php](https://github.com/wulimax/blogs/blob/master/docs/php/phpbyte.md)
 
+[17. java 与PHP 的bin2hex()的问题](https://github.com/wulimax/blogs/blob/master/docs/java/bin2hex.md)
+
 
 
 
