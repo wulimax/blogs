@@ -40,6 +40,8 @@
 
 [17. java 与PHP 的bin2hex()的问题](https://github.com/wulimax/blogs/blob/master/docs/java/bin2hex.md)
 
+[18.算法(leetcode)](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/README.md)
+
 
 
 
