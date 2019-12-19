@@ -10,5 +10,7 @@
 
 5. #### [LRU缓存机制](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/5.md)
 
-  
+6. [字典数设计](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/6.md)
+
+   
 
