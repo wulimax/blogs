@@ -12,5 +12,7 @@
 
 6. [字典数设计](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/6.md)
 
-   
+7. [两数相加](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/7.md)
+
+    
 
