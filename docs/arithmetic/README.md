@@ -14,5 +14,5 @@
 
 7. [两数相加](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/7.md)
 
-    
+8. #### [餐盘栈](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/8.md)
 
