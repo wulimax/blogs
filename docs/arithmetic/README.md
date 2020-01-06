@@ -16,3 +16,5 @@
 
 8. #### [餐盘栈](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/8.md)
 
+9. [柱状图中最大的矩形](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/9.md)
+
