@@ -12,5 +12,7 @@
 
 [6.解密微信公众号数据](https://github.com/wulimax/blogs/blob/master/docs/java/wxcode.md)
 
+[7.String长度限制](https://github.com/wulimax/blogs/blob/master/docs/java/StringLength.md)
+
 
 
