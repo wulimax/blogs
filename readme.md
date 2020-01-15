@@ -44,7 +44,7 @@
 
 [19.spark](https://github.com/wulimax/blogs/blob/master/docs/spark/README.md)
 
-
+[20.图像识别](https://github.com/wulimax/blogs/blob/master/docs/learning/README.md)
 
 
 
