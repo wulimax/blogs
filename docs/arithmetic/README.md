@@ -19,4 +19,7 @@
 9. [柱状图中最大的矩形](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/9.md) 
 
 10. [最大的矩形](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/10.md)
+
 11. [最小数组(40)](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/11.md)
+
+12. [999. 车的可用捕获量](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/12.md)
