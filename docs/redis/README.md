@@ -5,3 +5,4 @@
 2.[redis 基础知识1](https://github.com/wulimax/blogs/blob/master/docs/redis/redis-1.pdf)
 
 3.[redis 基础知识2](https://github.com/wulimax/blogs/blob/master/docs/redis/redis-2.pdf)
+

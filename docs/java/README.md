@@ -14,5 +14,9 @@
 
 [7.String长度限制](https://github.com/wulimax/blogs/blob/master/docs/java/StringLength.md)
 
+[8.hystrix](https://github.com/wulimax/blogs/blob/master/docs/java/hystrix.md)
+
+[9.netty 至UDP双向通讯](https://github.com/wulimax/blogs/blob/master/docs/java/netty.md)
+
 
 
