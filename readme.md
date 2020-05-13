@@ -16,7 +16,7 @@
 
 [5.sphinx造轮子](https://github.com/wulimax/blogs/blob/master/docs/sphinx/README.md);
 
-[6.小程序拦截器](https://github.com/wulimax/blogs/blob/master/docs/wx/intercepto.js);
+[6.小程序拦截器](https://github.com/wulimax/blogs/blob/master/docs/wx/wxjs.md);
 
 [7.topN的思路](https://github.com/wulimax/blogs/blob/master/docs/TopN/README.md);
 
