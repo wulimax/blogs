@@ -23,3 +23,4 @@
 11. [最小数组(40)](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/11.md)
 
 12. [999. 车的可用捕获量](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/12.md)
+12. [去重算法 ](https://github.com/wulimax/blogs/blob/master/docs/arithmetic/13.md)
