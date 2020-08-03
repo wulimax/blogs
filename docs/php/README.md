@@ -10,5 +10,7 @@
 
 [5.单例数据库链接类](https://github.com/wulimax/blogs/blob/master/docs/php/DB.md)
 
+[5.php请求方法](https://github.com/wulimax/blogs/blob/master/docs/php/post_url.md)
+
 
 
