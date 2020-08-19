@@ -1,1 +1,37 @@
-<mxfile host="app.diagrams.net" modified="2020-08-19T03:25:23.262Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" version="13.6.3" etag="pjcuZ0t2xnfK7ENUbWT6" type="github"><diagram id="V8suXNRgpUSXN9IwoPuU">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-08-19T06:47:02.942Z" agent="5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36" etag="a8mLIaeghK0n1W8EgZKX" version="13.6.3" type="github">
+  <diagram id="V8suXNRgpUSXN9IwoPuU" name="第 1 页">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wOELeKwPuDMt3Or-8Njf-1" value="用户" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="130" y="50" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wOELeKwPuDMt3Or-8Njf-2" value="企业微信" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="650" y="50" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wOELeKwPuDMt3Or-8Njf-3" value="应用" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="370" y="50" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wOELeKwPuDMt3Or-8Njf-6" value="用户点击应用" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=2;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="180" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wOELeKwPuDMt3Or-8Njf-7" value="f发送连接" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;strokeWidth=2;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;notch=0;" vertex="1" parent="1">
+          <mxGeometry x="510" y="270" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wOELeKwPuDMt3Or-8Njf-8" value="生成重定向连接" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="364" y="230" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wOELeKwPuDMt3Or-8Njf-10" value="通过code获取用户信息" style="shape=parallelogram;html=1;strokeWidth=2;perimeter=parallelogramPerimeter;whiteSpace=wrap;rounded=1;arcSize=12;size=0.23;" vertex="1" parent="1">
+          <mxGeometry x="340" y="500" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="wOELeKwPuDMt3Or-8Njf-11" value="携带code" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;flipH=1;notch=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="430" width="100" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wOELeKwPuDMt3Or-8Njf-12" value="用户登录成功展示用户页面" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;flipH=1;notch=0;" vertex="1" parent="1">
+          <mxGeometry x="220" y="585" width="100" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
