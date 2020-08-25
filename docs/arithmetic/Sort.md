@@ -73,5 +73,22 @@ private void sortIntegers3(int[] arr){
         }
     }
 }
+
+ public static void Bubble(int[] array){
+        for( int end = array.length -1 ;end >0 ;end--){
+            int sortedIndex = end;
+            for (int begin =1 ; begin <= end;begin++){
+                if(array[begin] < array[begin-1]){
+                    int tmp = array[begin];
+                    array[begin] = array[begin -1];
+                    array[begin -1]  = tmp;
+                    sortedIndex = begin;
+                }
+                nums++;
+            }
+            end = sortedIndex;
+        }
+    }
+
 ```
 
