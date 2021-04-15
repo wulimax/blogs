@@ -52,6 +52,8 @@
 
 [22. 设计模式](https://github.com/wulimax/blogs/blob/master/docs/designpattern/README.md)
 
+[23. JAVA探针技术初探](https://github.com/wulimax/blogs/blob/master/docs/java/agent.md)
+
 
 
 
